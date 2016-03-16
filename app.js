@@ -7,19 +7,16 @@ alert('Welcome to my webpage, ' + welcomeName + '! I\'m going to ask you a few q
 var questionOneUser = prompt('My favorite food is sushi. (y/n)').toUpperCase();
 console.log('Answer: ' + questionOneUser);
 
-var questionOneAnswer = 'Y'
+var questionOneAnswer = 'Y';
 
-if (questionOneUser === 'Y' || 'N') {
-  break;
-}
-else {
+while (questionOneUser !== 'Y' || 'N') {
   alert('Please enter your response is the form of \"y or n\"');
-  break;
+  questionOneUser = prompt('My favorite food is sushi. (y/n)').toUpperCase();
 }
 
 if (questionOneUser === questionOneAnswer) {
-    alert('That is correct!');
-  }
-  else {
-    alert('Wrong answer!');
-  }
+  alert('That is correct!');
+}
+else {
+  alert('Wrong answer!');
+}

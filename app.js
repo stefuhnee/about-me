@@ -9,14 +9,9 @@ console.log('Answer: ' + questionOneUser);
 
 var questionOneAnswer = 'Y';
 
-while (questionOneUser !== 'Y' || 'N') {
-  alert('Please enter your response is the form of \"y or n\"');
-  questionOneUser = prompt('My favorite food is sushi. (y/n)').toUpperCase();
-}
-
 if (questionOneUser === questionOneAnswer) {
-  alert('That is correct!');
+  alert('Great job! You guessed correctly!');
 }
 else {
-  alert('Wrong answer!');
+  alert('Nope, that\'s not right.');
 }

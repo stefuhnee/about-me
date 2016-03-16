@@ -7,7 +7,27 @@ alert('Welcome to my webpage, ' + welcomeName + '! I\'m going to ask you a few q
 var questionOneUser = prompt('My favorite food is sushi. (y/n)').toUpperCase();
 console.log('Answer: ' + questionOneUser);
 
+var questionTwoUser = prompt('My favorite color is orange. (y/n)').toUpperCase();
+console.log('Answer: ' + questionTwoUser);
+
+var questionThreeUser = prompt('I am a unicorn (y/n)').toUpperCase();
+console.log('Answer: ' + questionThreeUser);
+
+var questionFourUser = prompt('I was born in Seattle. (y/n)').toUpperCase();
+console.log('Answer: ' + questionFourUser);
+
+var questionFiveUser = prompt('I enjoy long walks on the beach. (y/n)').toUpperCase();
+console.log('Answer: ' + questionFiveUser);
+
+var questionSixUser = prompt('Coding bores me (y/n)').toUpperCase();
+console.log('Answer: ' + questionSixUser);
+
 var questionOneAnswer = 'Y';
+var questionTwoAnswer = 'N';
+var questionThreeAnswer = 'Y';
+var questionFourAnswer = 'Y';
+var questionFiveAnswer = 'Y';
+var questionSixAnswer = 'N';
 
 if (questionOneUser === questionOneAnswer) {
   alert('Great job! You guessed correctly!');

@@ -7,5 +7,15 @@ var questionOneUser = prompt('My favorite food is sushi. (y/n)').toUpperCase();
 var questionOneAnswer = 'Y'
 
 if (questionOneUser === 'Y' || 'N') {
-  
+  if (questionOneUser === questionOneAnswer) {
+    alert('That is correct!');
+  }
+  else {
+    alert('Wrong answer!');
+  }
+else {
+  alert('Please enter your response is the form of \"y or n\"');
+  questionOneUser;
+  continue;
+}
 }

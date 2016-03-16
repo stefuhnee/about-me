@@ -73,4 +73,5 @@ if (questionFiveUser === questionFiveAnswer) {
 }
 else {
   alert('Nope, that\'s not right. That\'s it! No more questions!');
+  console.log('Equality evaluated as: ' + (questionFiveUser === questionFiveAnswer));
 }

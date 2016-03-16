@@ -66,5 +66,5 @@ if (questionFiveUser === questionFiveAnswer) {
   }
 }
 else {
-  alert('Nope, that\'s not right. That\'s it!');
+  alert('Nope, that\'s not right. That\'s it! No more questions!');
 }

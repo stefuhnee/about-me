@@ -53,19 +53,18 @@ console.log('User Answer: ' + questionFiveUser);
 var questionFiveAnswer = 'Y';
 
 if (questionFiveUser === questionFiveAnswer) {
-  alert('Great job! You guessed correctly!');
+  alert('Great job! You guessed correctly! One more bonus question!');
+  var questionSixUser = prompt('Coding bores me (y/n)').toUpperCase();
+  console.log('User Answer: ' + questionSixUser);
+  var questionSixAnswer = 'N';
+/*Only executes if the user correctly answers Question 5*/
+  if (questionSixUser === questionSixAnswer) {
+    alert('Great job! You guessed correctly!');
+  }
+  else {
+    alert('Nope, that\'s not right.');
+  }
 }
 else {
-  alert('Nope, that\'s not right.');
-}
-
-var questionSixUser = prompt('Coding bores me (y/n)').toUpperCase();
-console.log('User Answer: ' + questionSixUser);
-var questionSixAnswer = 'N';
-
-if (questionSixUser === questionSixAnswer) {
-  alert('Great job! You guessed correctly!');
-}
-else {
-  alert('Nope, that\'s not right.');
+  alert('Nope, that\'s not right. That\'s it!');
 }

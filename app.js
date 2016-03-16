@@ -5,7 +5,7 @@ alert('Welcome to my webpage, ' + welcomeName + '! I\'m going to ask you a few q
 
 /* Asks user to answer and changes answer to uppercase, storing it in the variable questionOneUser */
 var questionOneUser = prompt('My favorite food is sushi. (y/n)').toUpperCase();
-console.log('Answer: ' + questionOneUser);
+console.log('User Answer: ' + questionOneUser);
 var questionOneAnswer = 'Y';
 
 if (questionOneUser === questionOneAnswer) {
@@ -16,7 +16,7 @@ else {
 }
 
 var questionTwoUser = prompt('My favorite color is orange. (y/n)').toUpperCase();
-console.log('Answer: ' + questionTwoUser);
+console.log('User Answer: ' + questionTwoUser);
 var questionTwoAnswer = 'N';
 
 if (questionTwoUser === questionTwoAnswer) {
@@ -27,7 +27,7 @@ else {
 }
 
 var questionThreeUser = prompt('I am a unicorn (y/n)').toUpperCase();
-console.log('Answer: ' + questionThreeUser);
+console.log('User Answer: ' + questionThreeUser);
 var questionThreeAnswer = 'Y';
 
 if (questionThreeUser === questionThreeAnswer) {
@@ -38,7 +38,7 @@ else {
 }
 
 var questionFourUser = prompt('I was born in Seattle. (y/n)').toUpperCase();
-console.log('Answer: ' + questionFourUser);
+console.log('User Answer: ' + questionFourUser);
 var questionFourAnswer = 'Y';
 
 if (questionFourUser === questionFourAnswer) {
@@ -49,7 +49,7 @@ else {
 }
 
 var questionFiveUser = prompt('I enjoy long walks on the beach. (y/n)').toUpperCase();
-console.log('Answer: ' + questionFiveUser);
+console.log('User Answer: ' + questionFiveUser);
 var questionFiveAnswer = 'Y';
 
 if (questionFiveUser === questionFiveAnswer) {
@@ -60,7 +60,7 @@ else {
 }
 
 var questionSixUser = prompt('Coding bores me (y/n)').toUpperCase();
-console.log('Answer: ' + questionSixUser);
+console.log('User Answer: ' + questionSixUser);
 var questionSixAnswer = 'N';
 
 if (questionSixUser === questionSixAnswer) {

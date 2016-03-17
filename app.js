@@ -5,7 +5,7 @@ console.log('User name: ' + welcomeName);
 
 alert('Welcome to my webpage, ' + welcomeName + '! I\'m going to ask you a few questions to help you learn more about me! Please type y or n to answer.');
 
-/*Asks user to answer and changes answer to uppercase, storing it in the variable questionOneUser*/
+// Asks user to answer and changes answer to uppercase, storing it in the variable questionOneUser
 var questionOneUser = prompt('My favorite food is sushi. (y/n)').toUpperCase();
 totalAnswers++;
 console.log('Do you think my favorite food is sushi?: ' + questionOneUser);
@@ -84,7 +84,7 @@ if (questionFiveUser === questionFiveAnswer) {
   console.log('User Answer: ' + questionSixUser);
   totalAnswers++;
   var questionSixAnswer = 'N';
-/*Only executes if the user correctly answers Question 5*/
+// Only executes if the user correctly answers Question 5*/
   if (questionSixUser === questionSixAnswer) {
     alert('Great job! You guessed correctly! That\'s the end! You rock!');
     numCorrectAnswers++;
@@ -102,7 +102,7 @@ else {
   console.log('Number of correct answers so far: ' + numCorrectAnswers + ' out of ' + totalAnswers);
 }
 
-/*Guessing game*/
+// Guessing game
 
 var guessAttempt = 0;
 var userVelocityGuess = prompt('What is the airspeed velocity of an unladen swallow in mph? You have 4 tries!');
@@ -134,7 +134,7 @@ console.log('Number of correct answers so far: ' + numCorrectAnswers + ' out of 
 
 alert('You got ' + numCorrectAnswers + ' out of ' + totalAnswers + ' questions correct, ' + welcomeName + '! Thanks for playing!');
 
-/*Bonus goal*/
+// Bonus goal
 var favoriteGames = [];
 while (favoriteGames.length < 5) {
   var gameAnswer = prompt('What is one of your top five favorite games?');

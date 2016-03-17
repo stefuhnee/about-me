@@ -79,23 +79,23 @@ else {
 var guessAttempt = 0;
 var userVelocityGuess = prompt('What is the airspeed velocity of an unladen swallow in mph? You have 4 tries!');
 
-/* while (userVelocityGuess !== 24 && guessAttempt < 4) {
+while (userVelocityGuess !== 24 || guessAttempt < 4) {
   if (userVelocityGuess < 24) {
     alert('Sorry, your guess is too low.');
-    guessAttempt += guessAttempt;
-    userVelocityGuess = prompt('What is the airspeed velocity of an unladen swallow? You have 4 tries!');
+    guessAttempt++;
+    console.log('Guess number: ' + guessAttempt);
   } else if (isNaN(userVelocityGuess)) {
     alert('That is not a number! Try again!');
-    userVelocityGuess = prompt('What is the airspeed velocity of an unladen swallow? You have 4 tries!');
+    console.log('Guess number: ' + guessAttempt);
   } else if (userVelocityGuess > 24) {
     alert('Sorry, your guess is too high!');
-    guessAttempt += guessAttempt;
-    userVelocityGuess = prompt('What is the airspeed velocity of an unladen swallow? You have 4 tries!');
-  } else {
+    guessAttempt++;
+    console.log('Guess number: ' + guessAttempt);
+  } else if (guessAttempt > 4) {
     alert('You are out of guesses! The correct airspeed velocity of an unladen swallow is 24mph. (source: http://style.org/unladenswallow/)');
+  } else {
+    alert('You must be really smart! You got it!');
+    break;
   }
-} */
-while (guessAttempt < 4) {
-  guessAttempt++;
-  console.log('Guess number: ' + guessAttempt);
+  userVelocityGuess = prompt('What is the airspeed velocity of an unladen swallow? You have 4 tries!');
 }

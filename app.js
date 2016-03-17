@@ -136,8 +136,9 @@ alert('You got ' + numCorrectAnswers + ' out of ' + totalAnswers + ' questions c
 
 // Bonus goal
 var favoriteGames = [];
+var gameAnswer;
 while (favoriteGames.length < 5) {
-  var gameAnswer = prompt('What is one of your top five favorite games?');
+  gameAnswer = prompt('What is one of your top five favorite games?');
   favoriteGames.push(gameAnswer);
   console.log('Games stored so far: ' + favoriteGames);
 }

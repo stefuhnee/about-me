@@ -1,11 +1,11 @@
-/* var numCorrectAnswers = 0;
+var numCorrectAnswers = 0;
 var totalAnswers = 0;
 var welcomeName = prompt('Hello, what is your name?');
 console.log('User name: ' + welcomeName);
 
 alert('Welcome to my webpage, ' + welcomeName + '! I\'m going to ask you a few questions to help you learn more about me! Please type y or n to answer.');
 
-Asks user to answer and changes answer to uppercase, storing it in the variable questionOneUser
+/*Asks user to answer and changes answer to uppercase, storing it in the variable questionOneUser*/
 var questionOneUser = prompt('My favorite food is sushi. (y/n)').toUpperCase();
 totalAnswers++;
 console.log('Do you think my favorite food is sushi?: ' + questionOneUser);
@@ -84,7 +84,7 @@ if (questionFiveUser === questionFiveAnswer) {
   console.log('User Answer: ' + questionSixUser);
   totalAnswers++;
   var questionSixAnswer = 'N';
-Only executes if the user correctly answers Question 5
+/*Only executes if the user correctly answers Question 5*/
   if (questionSixUser === questionSixAnswer) {
     alert('Great job! You guessed correctly! That\'s the end! You rock!');
     numCorrectAnswers++;
@@ -137,7 +137,8 @@ while (favoriteGames.length < 5) {
   var gameAnswer = prompt('What is one of your top five favorite games?');
   favoriteGames.push(gameAnswer);
   console.log('Games stored so far: ' + favoriteGames);
-} */
+}
+/*
 var numCorrectAnswers = 0;
 var totalAnswers = 0;
 
@@ -155,10 +156,9 @@ for (var i = 0; i < myQuestions.length; i++) {
   } else if (userAnswers[i] !== 'Y' || 'N') {
     alert('Please enter y or n.');
     i--;
-    userAnswers.remove
   }
   else {
     alert('That is not the right answer :(');
   }
   console.log('Number of correct answers so far: ' + numCorrectAnswers + ' out of ' + totalAnswers);
-}
+} */

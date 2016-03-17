@@ -5,7 +5,7 @@ alert('Welcome to my webpage, ' + welcomeName + '! I\'m going to ask you a few q
 
 /* Asks user to answer and changes answer to uppercase, storing it in the variable questionOneUser */
 var questionOneUser = prompt('My favorite food is sushi. (y/n)').toUpperCase();
-console.log('User Answer: ' + questionOneUser);
+console.log('Do you think my favorite food is sushi?: ' + questionOneUser);
 var questionOneAnswer = 'Y';
 
 if (questionOneUser === questionOneAnswer) {
@@ -17,7 +17,7 @@ else {
 console.log('Equality evaluated as: ' + (questionOneUser === questionOneAnswer));
 
 var questionTwoUser = prompt('My favorite color is orange. (y/n)').toUpperCase();
-console.log('User Answer: ' + questionTwoUser);
+console.log('Do you think my favorite color orange?: ' + questionTwoUser);
 var questionTwoAnswer = 'N';
 
 if (questionTwoUser === questionTwoAnswer) {

@@ -139,9 +139,16 @@ while (favoriteGames.length < 5) {
   console.log('Games stored so far: ' + favoriteGames);
 } */
 var myQuestions = ['My favorite food is sushi. (y/n)', 'My favorite color is orange. (y/n)', 'I am a unicorn (y/n)', 'I was born in Seattle. (y/n)', 'I enjoy long walks on the beach. (y/n)', 'Coding bores me (y/n)', 'What is the airspeed velocity of an unladen swallow in mph? You have 4 tries!'];
-var myAnswers = [];
+var myAnswers = ['Y', 'N', 'Y', 'Y', 'Y', 'N', '24'];
 var userAnswers = [];
 
 for (var i = 0; i < myQuestions.length(); i++) {
-  myAnswers.push((prompt(myQuestions[i])));
+  myAnswers.push((prompt(myQuestions[i])).toUpperCase());
+  totalAnswers++;
+  if (userAnswers[i] === myAnswers[i]) {
+    numCorrectAnswers++;
+    alert('Nice work! You got it right!');
+  } else {
+    alert('That is not the right answer :(');
+  }
 }

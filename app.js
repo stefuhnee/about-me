@@ -1,3 +1,4 @@
+var numCorrectAnswers = 0;
 var welcomeName = prompt('Hello, what is your name?');
 console.log('User name: ' + welcomeName);
 
@@ -71,6 +72,8 @@ var questionFiveAnswer = 'Y';
 if (questionFiveUser === questionFiveAnswer) {
   alert('Great job! You guessed correctly! One more bonus question!');
   console.log('Equality evaluated as: ' + (questionFiveUser === questionFiveAnswer));
+  numCorrectAnswers++;
+  console.log('Number of correct answers so far: ' + numCorrectAnswers);
   var questionSixUser = prompt('Coding bores me (y/n)').toUpperCase();
   console.log('User Answer: ' + questionSixUser);
   var questionSixAnswer = 'N';
@@ -89,6 +92,7 @@ if (questionFiveUser === questionFiveAnswer) {
 else {
   alert('Nope, that\'s not right. That\'s it! No more questions!');
   console.log('Equality evaluated as: ' + (questionFiveUser === questionFiveAnswer));
+  console.log('Number of correct answers so far: ' + numCorrectAnswers);
 }
 
 var guessAttempt = 0;
@@ -110,10 +114,10 @@ while (userVelocityGuess !== 24 || guessAttempt < 4) {
     alert('You are out of guesses! The correct airspeed velocity of an unladen swallow is 24mph. (source: http://style.org/unladenswallow/)');
   } else {
     alert('You must be really smart! You got it!');
+    numCorrectAnswers++;
     break;
   }
   userVelocityGuess = prompt('What is the airspeed velocity of an unladen swallow? You have 4 tries!');
 }
 
-var numCorrectAnswers = 0;
 console.log('Total correct: ' + numCorrectAnswers);

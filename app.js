@@ -102,6 +102,8 @@ else {
   console.log('Number of correct answers so far: ' + numCorrectAnswers + ' out of ' + totalAnswers);
 }
 
+/*Guessing game*/
+
 var guessAttempt = 0;
 var userVelocityGuess = prompt('What is the airspeed velocity of an unladen swallow in mph? You have 4 tries!');
 totalAnswers++;
@@ -132,6 +134,7 @@ console.log('Number of correct answers so far: ' + numCorrectAnswers + ' out of 
 
 alert('You got ' + numCorrectAnswers + ' out of ' + totalAnswers + ' questions correct, ' + welcomeName + '! Thanks for playing!');
 
+/*Bonus goal*/
 var favoriteGames = [];
 while (favoriteGames.length < 5) {
   var gameAnswer = prompt('What is one of your top five favorite games?');

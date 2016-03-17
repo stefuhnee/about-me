@@ -1,11 +1,11 @@
-var numCorrectAnswers = 0;
+/* var numCorrectAnswers = 0;
 var totalAnswers = 0;
 var welcomeName = prompt('Hello, what is your name?');
 console.log('User name: ' + welcomeName);
 
 alert('Welcome to my webpage, ' + welcomeName + '! I\'m going to ask you a few questions to help you learn more about me! Please type y or n to answer.');
 
-/*Asks user to answer and changes answer to uppercase, storing it in the variable questionOneUser*/
+Asks user to answer and changes answer to uppercase, storing it in the variable questionOneUser
 var questionOneUser = prompt('My favorite food is sushi. (y/n)').toUpperCase();
 totalAnswers++;
 console.log('Do you think my favorite food is sushi?: ' + questionOneUser);
@@ -84,7 +84,7 @@ if (questionFiveUser === questionFiveAnswer) {
   console.log('User Answer: ' + questionSixUser);
   totalAnswers++;
   var questionSixAnswer = 'N';
-/*Only executes if the user correctly answers Question 5*/
+Only executes if the user correctly answers Question 5
   if (questionSixUser === questionSixAnswer) {
     alert('Great job! You guessed correctly! That\'s the end! You rock!');
     numCorrectAnswers++;
@@ -137,4 +137,11 @@ while (favoriteGames.length < 5) {
   var gameAnswer = prompt('What is one of your top five favorite games?');
   favoriteGames.push(gameAnswer);
   console.log('Games stored so far: ' + favoriteGames);
+} */
+var myQuestions = ['My favorite food is sushi. (y/n)', 'My favorite color is orange. (y/n)', 'I am a unicorn (y/n)', 'I was born in Seattle. (y/n)', 'I enjoy long walks on the beach. (y/n)', 'Coding bores me (y/n)', 'What is the airspeed velocity of an unladen swallow in mph? You have 4 tries!'];
+var myAnswers = [];
+var userAnswers = [];
+
+for (var i = 0; i < myQuestions.length(); i++) {
+  myAnswers.push((prompt(myQuestions[i])));
 }

@@ -130,4 +130,11 @@ while (userVelocityGuess !== 24 || guessAttempt < 4) {
 
 console.log('Number of correct answers so far: ' + numCorrectAnswers + ' out of ' + totalAnswers);
 
-alert('You got ' + numCorrectAnswers + ' out of ' + totalAnswers + ' questions correct! Thanks for playing!');
+alert('You got ' + numCorrectAnswers + ' out of ' + totalAnswers + ' questions correct, ' + welcomeName + '! Thanks for playing!');
+
+var favoriteGames = [];
+while (favoriteGames.length < 5) {
+  var gameAnswer = prompt('What is one of your top five favorite games?');
+  favoriteGames.push(gameAnswer);
+  console.log('Games stored so far: ' + favoriteGames);
+}

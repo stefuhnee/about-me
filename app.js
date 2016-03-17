@@ -1,18 +1,21 @@
-/* var welcomeName = prompt('Hello, what is your name?');
+var welcomeName = prompt('Hello, what is your name?');
 console.log('User name: ' + welcomeName);
 
 alert('Welcome to my webpage, ' + welcomeName + '! I\'m going to ask you a few questions to help you learn more about me! Please type y or n to answer.');
 
-Asks user to answer and changes answer to uppercase, storing it in the variable questionOneUser
+/*Asks user to answer and changes answer to uppercase, storing it in the variable questionOneUser*/
 var questionOneUser = prompt('My favorite food is sushi. (y/n)').toUpperCase();
 console.log('Do you think my favorite food is sushi?: ' + questionOneUser);
 var questionOneAnswer = 'Y';
 
 if (questionOneUser === questionOneAnswer) {
   alert('Great job! You guessed correctly!');
+  numCorrectAnswers++;
+  console.log('Number of correct answers so far: ' + numCorrectAnswers);
 }
 else {
   alert('Nope, that\'s not right.');
+  console.log('Number of correct answers so far: ' + numCorrectAnswers);
 }
 console.log('Equality evaluated as: ' + (questionOneUser === questionOneAnswer));
 
@@ -22,9 +25,12 @@ var questionTwoAnswer = 'N';
 
 if (questionTwoUser === questionTwoAnswer) {
   alert('Great job! You guessed correctly!');
+  numCorrectAnswers++;
+  console.log('Number of correct answers so far: ' + numCorrectAnswers);
 }
 else {
   alert('Nope, that\'s not right.');
+  console.log('Number of correct answers so far: ' + numCorrectAnswers);
 }
 console.log('Equality evaluated as: ' + (questionTwoUser === questionTwoAnswer));
 
@@ -34,9 +40,12 @@ var questionThreeAnswer = 'Y';
 
 if (questionThreeUser === questionThreeAnswer) {
   alert('Great job! You guessed correctly!');
+  numCorrectAnswers++;
+  console.log('Number of correct answers so far: ' + numCorrectAnswers);
 }
 else {
   alert('Nope, that\'s not right.');
+  console.log('Number of correct answers so far: ' + numCorrectAnswers);
 }
 console.log('Equality evaluated as: ' + (questionThreeUser === questionThreeAnswer));
 
@@ -46,9 +55,12 @@ var questionFourAnswer = 'Y';
 
 if (questionFourUser === questionFourAnswer) {
   alert('Great job! You guessed correctly!');
+  numCorrectAnswers++;
+  console.log('Number of correct answers so far: ' + numCorrectAnswers);
 }
 else {
   alert('Nope, that\'s not right.');
+  console.log('Number of correct answers so far: ' + numCorrectAnswers);
 }
 console.log('Equality evaluated as: ' + (questionFourUser === questionFourAnswer));
 
@@ -62,19 +74,22 @@ if (questionFiveUser === questionFiveAnswer) {
   var questionSixUser = prompt('Coding bores me (y/n)').toUpperCase();
   console.log('User Answer: ' + questionSixUser);
   var questionSixAnswer = 'N';
-/*Only executes if the user correctly answers Question 5
+/*Only executes if the user correctly answers Question 5*/
   if (questionSixUser === questionSixAnswer) {
     alert('Great job! You guessed correctly! That\'s the end! You rock!');
+    numCorrectAnswers++;
+    console.log('Number of correct answers so far: ' + numCorrectAnswers);
   }
   else {
     alert('Nope, that\'s not right.');
+    console.log('Number of correct answers so far: ' + numCorrectAnswers);
   }
   console.log('Equality evaluated as: ' + (questionSixUser === questionSixAnswer));
 }
 else {
   alert('Nope, that\'s not right. That\'s it! No more questions!');
   console.log('Equality evaluated as: ' + (questionFiveUser === questionFiveAnswer));
-} */
+}
 
 var guessAttempt = 0;
 var userVelocityGuess = prompt('What is the airspeed velocity of an unladen swallow in mph? You have 4 tries!');
@@ -99,3 +114,6 @@ while (userVelocityGuess !== 24 || guessAttempt < 4) {
   }
   userVelocityGuess = prompt('What is the airspeed velocity of an unladen swallow? You have 4 tries!');
 }
+
+var numCorrectAnswers = 0;
+console.log('Total correct: ' + numCorrectAnswers);

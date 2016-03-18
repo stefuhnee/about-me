@@ -142,6 +142,7 @@ while (favoriteGames.length < 5) {
   favoriteGames.push(gameAnswer);
   console.log('Games stored so far: ' + favoriteGames);
 }
+alert('You listed your top 5 games as: ' + favoriteGames);
 /*
 var numCorrectAnswers = 0;
 var totalAnswers = 0;

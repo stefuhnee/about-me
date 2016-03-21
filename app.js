@@ -6,58 +6,39 @@ var totalAnswers = 0;
 var myQuestions = ['My favorite food is sushi. (y/n)', 'My favorite color is orange. (y/n)', 'I am a unicorn (y/n)'
 , 'I was born in Seattle. (y/n)', 'I enjoy long walks on the beach. (y/n)', 'Coding bores me (y/n)', 'What is the airspeed velocity of an unladen swallow in mph? You have 4 tries!'];
 function amCorrect(){
-}
-
-for (var i = 0; i < myQuestions.length; i++) {
-  userAnswers.push((prompt(myQuestions[i])).toUpperCase());
-  console.log('User Answers so far: ' + userAnswers);
   if (userAnswers[i] === correctAnswers[i]) {
     numCorrectAnswers++;
     alert('Nice work! You got it right!');
-  } else if (userAnswers[i] !== 'Y' || 'N') {
+  } else if (userAnswers[i] !== 'Y' && 'N') {
     alert('Please enter y or n.');
-    i--;
   }
   else {
     alert('That is not the right answer :(');
   }
   totalAnswers++;
   console.log('Number of correct answers so far: ' + numCorrectAnswers + ' out of ' + totalAnswers);
-
-  if (userAnswers[4] === correctAnswers[4]) {
-    alert('Great job! You guessed correctly! One more bonus question!');
-    console.log('Equality evaluated as: ' + (userAnswers[4] === correctAnswers[4]);
-    numCorrectAnswers++;
-    console.log('Number of correct answers so far: ' + numCorrectAnswers + ' out of ' + totalAnswers);
-  else{
-    break;
-  }
-  
-    var questionSixUser = prompt('Coding bores me (y/n)').toUpperCase();
+}
+var conLoop = true;
+var i = 0;
+while (i < myQuestions.length && conLoop == true) {
+  userAnswers.push((prompt(myQuestions[i])).toUpperCase());
+  console.log('User Answers so far: ' + userAnswers);
+  amCorrect();
+  i++;
+  if (i === 4){
+    if (userAnswers[4] === correctAnswers[4]) {
+      alert('Great job! You guessed correctly! One more bonus question!');
+      numCorrectAnswers++;
+      console.log('Number of correct answers so far: ' + numCorrectAnswers + ' out of ' + totalAnswers);
+    } else {
+      conLoop = false;
+    }
+}
+/* var questionSixUser = prompt('Coding bores me (y/n)').toUpperCase();
     console.log('User Answer: ' + questionSixUser);
     totalAnswers++;
     var questionSixAnswer = 'N';
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*var numCorrectAnswers = 0;
+    var numCorrectAnswers = 0;
 var totalAnswers = 0;
 var welcomeName = prompt('Hello, what is your name?');
 console.log('User name: ' + welcomeName);
@@ -143,8 +124,8 @@ if (questionFiveUser === questionFiveAnswer) {
   console.log('User Answer: ' + questionSixUser);
   totalAnswers++;
   var questionSixAnswer = 'N';
-// Only executes if the user correctly answers Question 5*/
-/*  if (questionSixUser === questionSixAnswer) {
+ Only executes if the user correctly answers Question 5
+if (questionSixUser === questionSixAnswer) {
     alert('Great job! You guessed correctly! That\'s the end! You rock!');
     numCorrectAnswers++;
     console.log('Number of correct answers so far: ' + numCorrectAnswers + ' out of ' + totalAnswers);
@@ -161,7 +142,7 @@ else {
   console.log('Number of correct answers so far: ' + numCorrectAnswers + ' out of ' + totalAnswers);
 }
 
-// Guessing game
+ Guessing game
 
 var guessAttempt = 0;
 var userVelocityGuess = prompt('What is the airspeed velocity of an unladen swallow in mph? You have 4 tries!');
@@ -193,7 +174,7 @@ console.log('Number of correct answers so far: ' + numCorrectAnswers + ' out of 
 
 alert('You got ' + numCorrectAnswers + ' out of ' + totalAnswers + ' questions correct, ' + welcomeName + '! Thanks for playing!');
 
-// Bonus goal
+ Bonus goal
 var favoriteGames = [];
 var gameAnswer;
 while (favoriteGames.length < 5) {
@@ -202,7 +183,6 @@ while (favoriteGames.length < 5) {
   console.log('Games stored so far: ' + favoriteGames);
 }
 alert('You listed your top 5 games as: ' + favoriteGames);
-/*
 var numCorrectAnswers = 0;
 var totalAnswers = 0;
 
@@ -225,4 +205,5 @@ for (var i = 0; i < myQuestions.length; i++) {
     alert('That is not the right answer :(');
   }
   console.log('Number of correct answers so far: ' + numCorrectAnswers + ' out of ' + totalAnswers);
-} */
+}
+*/

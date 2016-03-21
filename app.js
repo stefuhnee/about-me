@@ -24,15 +24,15 @@ while (i < myQuestions.length && conLoop == true) {
   userAnswers.push((prompt(myQuestions[i])).toUpperCase());
   console.log('User Answers so far: ' + userAnswers);
   amCorrect();
-  i++;
   if (i === 4){
     if (userAnswers[4] === correctAnswers[4]) {
-      alert('Great job! You guessed correctly! One more bonus question!');
-      numCorrectAnswers++;
-      console.log('Number of correct answers so far: ' + numCorrectAnswers + ' out of ' + totalAnswers);
+      amCorrect();
+      i++;
     } else {
       conLoop = false;
     }
+  }
+  i++;
 }
 /* var questionSixUser = prompt('Coding bores me (y/n)').toUpperCase();
     console.log('User Answer: ' + questionSixUser);

@@ -1,6 +1,8 @@
 var userAnswers = [];
-var correctAnswers = ['Y', 'N', 'Y', 'Y', 'Y','N', 24];
+var correctAnswers = ['Y', 'N', 'Y', 'Y', 'Y','N'];
+var guessingGameAnswer = 24;
 var numCorrectAnswers = 0;
+var totalAnswers = 0;
 var myQuestions = ['My favorite food is sushi. (y/n)', 'My favorite color is orange. (y/n)', 'I am a unicorn (y/n)'
 , 'I was born in Seattle. (y/n)', 'I enjoy long walks on the beach. (y/n)', 'Coding bores me (y/n)', 'What is the airspeed velocity of an unladen swallow in mph? You have 4 tries!'];
 function amCorrect(){
@@ -9,7 +11,7 @@ function amCorrect(){
 for (var i = 0; i < myQuestions.length; i++) {
   userAnswers.push((prompt(myQuestions[i])).toUpperCase());
   console.log('User Answers so far: ' + userAnswers);
-  if (userAnswers[i] === myAnswers[i]) {
+  if (userAnswers[i] === correctAnswers[i]) {
     numCorrectAnswers++;
     alert('Nice work! You got it right!');
   } else if (userAnswers[i] !== 'Y' || 'N') {
@@ -19,8 +21,41 @@ for (var i = 0; i < myQuestions.length; i++) {
   else {
     alert('That is not the right answer :(');
   }
+  totalAnswers++;
   console.log('Number of correct answers so far: ' + numCorrectAnswers + ' out of ' + totalAnswers);
-}
+
+  if (userAnswers[4] === correctAnswers[4]) {
+    alert('Great job! You guessed correctly! One more bonus question!');
+    console.log('Equality evaluated as: ' + (userAnswers[4] === correctAnswers[4]);
+    numCorrectAnswers++;
+    console.log('Number of correct answers so far: ' + numCorrectAnswers + ' out of ' + totalAnswers);
+  else{
+    break;
+  }
+  
+    var questionSixUser = prompt('Coding bores me (y/n)').toUpperCase();
+    console.log('User Answer: ' + questionSixUser);
+    totalAnswers++;
+    var questionSixAnswer = 'N';
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /*var numCorrectAnswers = 0;
 var totalAnswers = 0;

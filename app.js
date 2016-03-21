@@ -1,4 +1,28 @@
+var userAnswers = [];
+var correctAnswers = ['Y', 'N', 'Y', 'Y', 'Y','N', 24];
 var numCorrectAnswers = 0;
+var myQuestions = ['My favorite food is sushi. (y/n)', 'My favorite color is orange. (y/n)', 'I am a unicorn (y/n)'
+, 'I was born in Seattle. (y/n)', 'I enjoy long walks on the beach. (y/n)', 'Coding bores me (y/n)', 'What is the airspeed velocity of an unladen swallow in mph? You have 4 tries!'];
+function amCorrect(){
+}
+
+for (var i = 0; i < myQuestions.length; i++) {
+  userAnswers.push((prompt(myQuestions[i])).toUpperCase());
+  console.log('User Answers so far: ' + userAnswers);
+  if (userAnswers[i] === myAnswers[i]) {
+    numCorrectAnswers++;
+    alert('Nice work! You got it right!');
+  } else if (userAnswers[i] !== 'Y' || 'N') {
+    alert('Please enter y or n.');
+    i--;
+  }
+  else {
+    alert('That is not the right answer :(');
+  }
+  console.log('Number of correct answers so far: ' + numCorrectAnswers + ' out of ' + totalAnswers);
+}
+
+/*var numCorrectAnswers = 0;
 var totalAnswers = 0;
 var welcomeName = prompt('Hello, what is your name?');
 console.log('User name: ' + welcomeName);
@@ -85,7 +109,7 @@ if (questionFiveUser === questionFiveAnswer) {
   totalAnswers++;
   var questionSixAnswer = 'N';
 // Only executes if the user correctly answers Question 5*/
-  if (questionSixUser === questionSixAnswer) {
+/*  if (questionSixUser === questionSixAnswer) {
     alert('Great job! You guessed correctly! That\'s the end! You rock!');
     numCorrectAnswers++;
     console.log('Number of correct answers so far: ' + numCorrectAnswers + ' out of ' + totalAnswers);

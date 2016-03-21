@@ -20,7 +20,7 @@ function amCorrect(){
 }
 var conLoop = true;
 var i = 0;
-while (i < myQuestions.length && conLoop == true) {
+while (i < myQuestions.length - 1 && conLoop == true) {
   userAnswers.push((prompt(myQuestions[i])).toUpperCase());
   console.log('User Answers so far: ' + userAnswers);
   amCorrect();
@@ -34,6 +34,35 @@ while (i < myQuestions.length && conLoop == true) {
   }
   i++;
 }
+var guessAttempt = 0;
+var userVelocityGuess = prompt(myQuestions[6]);
+totalAnswers++;
+
+while (userVelocityGuess !== 24 && guessAttempt < 4) {
+  if (userVelocityGuess < 24) {
+    alert('Sorry, your guess is too low.');
+    guessAttempt++;
+    console.log('Guess number: ' + guessAttempt);
+  } else if (isNaN(userVelocityGuess)) {
+    alert('That is not a number! Try again!');
+    console.log('Guess number: ' + guessAttempt);
+  } else if (userVelocityGuess > 24) {
+    alert('Sorry, your guess is too high!');
+    guessAttempt++;
+    console.log('Guess number: ' + guessAttempt);
+  } else if (guessAttempt > 4) {
+    alert('You are out of guesses! The correct airspeed velocity of an unladen swallow is 24mph. (source: http://style.org/unladenswallow/)');
+  } else {
+    alert('You must be really smart! You got it!');
+    numCorrectAnswers++;
+    break;
+  }
+  userVelocityGuess = prompt('What is the airspeed velocity of an unladen swallow? You have 4 tries!');
+}
+
+console.log('Number of correct answers so far: ' + numCorrectAnswers + ' out of ' + totalAnswers);
+
+alert('You got ' + numCorrectAnswers + ' out of ' + totalAnswers + ' questions correct! Thanks for playing!');
 /* var questionSixUser = prompt('Coding bores me (y/n)').toUpperCase();
     console.log('User Answer: ' + questionSixUser);
     totalAnswers++;

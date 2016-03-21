@@ -1,5 +1,10 @@
 body {
   background-color: #f2e6ff;
+  font-family:Verdana, sans-serif;
+  width: 960px;
+}
+header {
+  text-align: center;
 }
 h1 {
   color: #5600b3;
@@ -9,4 +14,21 @@ p {
 }
 li {
   color: #47476b;
+}
+header, section, footer {
+  background-color: #ffffff;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+img.align-center {
+  display: block;
+  margin: 0px auto;
+}
+footer {
+  text-align: right;
+  padding-right: 10px;
+}
+#container {
+  margin: auto;
+  width: 960px;
 }

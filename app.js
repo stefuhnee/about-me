@@ -1,8 +1,8 @@
 var userAnswers = [];
+var guessAttempt = 0;
 var correctAnswers = 0;
 var totalAnswers = 0;
 var userAnswer;
-var numberOfGuesses = 0;
 var userVelocityGuess;
 var pTagOne = document.getElementById('ans-one');
 var pTagTwo = document.getElementById('ans-two');
@@ -10,8 +10,7 @@ var pTagThree = document.getElementById('ans-three');
 var pTagFour = document.getElementById('ans-four');
 var pTagFive = document.getElementById('ans-five');
 var pTagSix = document.getElementById('ans-six');
-var pTagSeven =
-document.getElementById('ans-seven');​
+var pTagSeven = document.getElementById('ans-seven');
 
 //Question 1
 function question1() {
@@ -37,11 +36,11 @@ function question2() {
   userAnswers.push(userAnswer);
   console.log('User Answers so far: ' + userAnswers);
   if (userAnswer === 'no'){
-    pTagOne.textContent = 'Correct!';
+    pTagTwo.textContent = 'Correct!';
     correctAnswers++;
     totalAnswers++;
   } else if (userAnswer === 'yes'){
-    pTagOne.textContent = 'Incorrect!';
+    pTagTwo.textContent = 'Incorrect!';
     totalAnswers++;
   } else {
     alert('Please Enter Yes or No');
@@ -55,11 +54,11 @@ function question3() {
   userAnswers.push(userAnswer);
   console.log('User Answers so far: ' + userAnswers);
   if (userAnswer === 'yes'){
-    pTagOne.textContent = 'Correct!';
+    pTagThree.textContent = 'Correct!';
     correctAnswers++;
     totalAnswers++;
   } else if (userAnswer === 'no'){
-    pTagOne.textContent = 'Incorrect!';
+    pTagThree.textContent = 'Incorrect!';
     totalAnswers++;
   } else {
     alert('Please Enter Yes or No');
@@ -74,11 +73,11 @@ function question4() {
   userAnswers.push(userAnswer);
   console.log('User Answers so far: ' + userAnswers);
   if (userAnswer === 'yes'){
-    pTagOne.textContent = 'Correct!';
+    pTagFour.textContent = 'Correct!';
     correctAnswers++;
     totalAnswers++;
   } else if (userAnswer === 'no'){
-    pTagOne.textContent = 'Incorrect!';
+    pTagFour.textContent = 'Incorrect!';
     totalAnswers++;
   } else {
     alert('Please Enter Yes or No');
@@ -92,9 +91,12 @@ function question5and6() {
   userAnswers.push(userAnswer);
   console.log('User Answers so far: ' + userAnswers);
   if (userAnswer === 'yes'){
-    pTagOne.textContent = 'Correct!';
+    pTagFive.textContent = 'Correct!';
     correctAnswers++;
     totalAnswers++;
+    userAnswer = prompt('Coding bores me (yes/no)').toLowerCase();
+    userAnswers.push(userAnswer);
+    console.log('User Answers so far: ' + userAnswers);
     //Runs if user gets question 5 correct.
     if (userAnswer === 'no') {
       pTagSix.textContent = 'Correct!';
@@ -108,7 +110,7 @@ function question5and6() {
       totalAnswers++;
     }
   } else if (userAnswer === 'no'){
-    pTagOne.textContent = 'Incorrect!';
+    pTagFive.textContent = 'Incorrect!';
     totalAnswers++;
   } else {
     alert('Please Enter Yes or No');
@@ -131,15 +133,18 @@ function guessingGame(){
       guessAttempt++;
       console.log('Guess number: ' + guessAttempt);
     } else if (guessAttempt > 4) {
-      alert('You are out of guesses! The correct airspeed velocity of an unladen swallow is 24mph. (source: http://style.org/unladenswallow/)');
+      pTagSeven.textContent = 'You are out of guesses! The correct airspeed velocity of an unladen swallow is 24mph. (source: http://style.org/unladenswallow/)!';
     } else {
+      pTagSeven.textContent = 'Correct!';
       alert('You must be really smart! You got it!');
-      numCorrectAnswers++;
+      correctAnswers++;
       break;
     }
+    totalAnswers++;
     userVelocityGuess = prompt('What is the airspeed velocity of an unladen swallow? You have 4 tries!');
   }
-  }
-console.log('Number of correct answers so far: ' + numCorrectAnswers + ' out of ' + totalAnswers);
+}
+guessingGame();
+console.log('Number of correct answers so far: ' + correctAnswers + ' out of ' + totalAnswers);
 
-alert('You got ' + numCorrectAnswers + ' out of ' + totalAnswers + ' questions correct! Thanks for playing!');
+alert('You got ' + correctAnswers + ' out of ' + totalAnswers + ' questions correct! Thanks for playing!');

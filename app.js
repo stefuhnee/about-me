@@ -15,7 +15,7 @@ document.getElementById('ans-seven');​
 
 //Question 1
 function question1() {
-  userAnswer = prompt('My favorite food is sushi. (y/n)').toLowerCase();
+  userAnswer = prompt('My favorite food is sushi. (yes/no)').toLowerCase();
   userAnswers.push(userAnswer);
   console.log('User Answers so far: ' + userAnswers);
   if (userAnswer === 'yes'){
@@ -31,9 +31,24 @@ function question1() {
   }
 }
 question1();
-​
-
-
+//Question 2
+function question2() {
+  userAnswer = prompt('My favorite color is orange. (yes/no)').toLowerCase();
+  userAnswers.push(userAnswer);
+  console.log('User Answers so far: ' + userAnswers);
+  if (userAnswer === 'no'){
+    pTagOne.textContent = 'Correct!';
+    correctAnswers++;
+    totalAnswers++;
+  } else if (userAnswer === 'yes'){
+    pTagOne.textContent = 'Incorrect!';
+    totalAnswers++;
+  } else {
+    alert('Please Enter Yes or No');
+    totalAnswers++;
+  }
+}
+question2();
 
 
 

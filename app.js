@@ -49,8 +49,24 @@ function question2() {
   }
 }
 question2();
-
-
+//Question 3
+function question3() {
+  userAnswer = prompt('I am a unicorn (yes/no)').toLowerCase();
+  userAnswers.push(userAnswer);
+  console.log('User Answers so far: ' + userAnswers);
+  if (userAnswer === 'yes'){
+    pTagOne.textContent = 'Correct!';
+    correctAnswers++;
+    totalAnswers++;
+  } else if (userAnswer === 'no'){
+    pTagOne.textContent = 'Incorrect!';
+    totalAnswers++;
+  } else {
+    alert('Please Enter Yes or No');
+    totalAnswers++;
+  }
+}
+question3();
 
 function amCorrect(){
   if (userAnswers[i] === correctAnswers[i]) {

@@ -1,10 +1,42 @@
 var userAnswers = [];
-var correctAnswers = ['Y', 'N', 'Y', 'Y', 'Y','N'];
-var guessingGameAnswer = 24;
-var numCorrectAnswers = 0;
+var correctAnswers = 0;
 var totalAnswers = 0;
-var myQuestions = ['My favorite food is sushi. (y/n)', 'My favorite color is orange. (y/n)', 'I am a unicorn (y/n)'
-, 'I was born in Seattle. (y/n)', 'I enjoy long walks on the beach. (y/n)', 'Coding bores me (y/n)', 'What is the airspeed velocity of an unladen swallow in mph? You have 4 tries!'];
+var userAnswer;
+var favoriteNumber;
+var numberOfGuesses = 0;
+var pTagOne = document.getElementById('ans-one');
+var pTagTwo = document.getElementById('ans-two');
+var pTagThree = document.getElementById('ans-three');
+var pTagFour = document.getElementById('ans-four');
+var pTagFive = document.getElementById('ans-five');
+var pTagSix = document.getElementById('ans-six');
+var pTagSeven =
+document.getElementById('ans-seven');​
+
+//Question 1
+function question1() {
+  userAnswer = prompt('My favorite food is sushi. (y/n)').toLowerCase();
+  userAnswers.push(userAnswer);
+  console.log('User Answers so far: ' + userAnswers);
+  if (userAnswer === 'yes'){
+    pTagOne.textContent = 'Correct!';
+    correctAnswers++;
+    totalAnswers++;
+  } else if (userAnswer === 'no'){
+    pTagOne.textContent = 'Incorrect!';
+    totalAnswers++;
+  } else {
+    alert('Please Enter Yes or No');
+    totalAnswers++;
+  }
+}
+question1();
+​
+
+
+
+
+
 function amCorrect(){
   if (userAnswers[i] === correctAnswers[i]) {
     numCorrectAnswers++;

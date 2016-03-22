@@ -68,6 +68,25 @@ function question3() {
 }
 question3();
 
+//Question 4
+function question4() {
+  userAnswer = prompt('I was born in Seattle. (yes/no)').toLowerCase();
+  userAnswers.push(userAnswer);
+  console.log('User Answers so far: ' + userAnswers);
+  if (userAnswer === 'yes'){
+    pTagOne.textContent = 'Correct!';
+    correctAnswers++;
+    totalAnswers++;
+  } else if (userAnswer === 'no'){
+    pTagOne.textContent = 'Incorrect!';
+    totalAnswers++;
+  } else {
+    alert('Please Enter Yes or No');
+    totalAnswers++;
+  }
+}
+question4();
+
 function amCorrect(){
   if (userAnswers[i] === correctAnswers[i]) {
     numCorrectAnswers++;
